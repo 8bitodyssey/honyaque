@@ -1,0 +1,1 @@
+/** * honyaque - v0.1.0 * * http://8bitodyssey.com/ * * Copyright 2016, 8bitOdyssey.com (http://8bitodyssey.com/) * Released under the GNU General Public License v2 or later */(function($){})(jQuery);
