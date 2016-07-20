@@ -3,6 +3,11 @@ var runSequence = require('run-sequence');
 var $    = require('gulp-load-plugins')();
 var pkg  = require('./package.json');
 
+var sassPaths = [
+  'bower_components/foundation-sites/scss',
+  'bower_components/motion-ui/src'
+];
+
 // javascript
 gulp.task('js', function() {
   return gulp.src('js/honyaque.js')
@@ -30,6 +35,7 @@ gulp.task('compass-dev', function() {
       errorHandler: $.notify.onError("Error: <%= error.message %>")
     }))
     .pipe($.compass({
+      import_path: sassPaths,
       sass:      'sass',
       css:       'css',
       image:     'images',
@@ -47,6 +53,7 @@ gulp.task('compass-dist', function() {
       errorHandler: $.notify.onError("Error: <%= error.message %>")
     }))
     .pipe($.compass({
+      import_path: sassPaths,
       sass:      'sass',
       css:       './',
       image:     'images',
