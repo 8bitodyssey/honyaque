@@ -4,11 +4,11 @@ Theme Name: honyaque
 Theme URI: http://8bitodyssey.com/
 Author: 8bitOdyssey.com
 Author URI: http://8bitodyssey.com/
-Description: WordPress theme for pixel lovers.
+Description: A WordPress theme for pixel lovers.
 Version: <%= pkg.version %>
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: hq
+Text Domain: honyaque
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -44,13 +44,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "compass";
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+//@import "variables-site/variables-site";
+//@import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "normalize";
+//@import "normalize";
 
 /*--------------------------------------------------------------
 # Typography

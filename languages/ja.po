@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: honyaque 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/tags/hq\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/honyaque\n"
 "POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"

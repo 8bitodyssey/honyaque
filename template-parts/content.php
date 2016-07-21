@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php do_action( 'hq_before_entry_header' ); ?>
+		<?php do_action( 'honyaque_before_entry_header' ); ?>
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -21,31 +21,31 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php hq_posted_on(); ?>
+			<?php honyaque_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-		<?php do_action( 'hq_after_entry_header' ); ?>
+		<?php do_action( 'honyaque_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php do_action( 'hq_before_entry_content' ); ?>
+		<?php do_action( 'honyaque_before_entry_content' ); ?>
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'hq' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'honyaque' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hq' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'honyaque' ),
 				'after'  => '</div>',
 			) );
 		?>
-		<?php do_action( 'hq_after_entry_content' ); ?>
+		<?php do_action( 'honyaque_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php hq_entry_footer(); ?>
+		<?php honyaque_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

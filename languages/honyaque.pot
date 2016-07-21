@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: honyaque 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/tags/hq\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/honyaque\n"
 "POT-Creation-Date: 2016-07-04 05:32:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
