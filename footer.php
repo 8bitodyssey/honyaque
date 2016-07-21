@@ -11,19 +11,19 @@
 
 ?>
 
-		<?php do_action( 'hq_after_content' ); ?>
+		<?php do_action( 'honyaque_after_content' ); ?>
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php do_action( 'hq_before_footer' ); ?>
+		<?php do_action( 'honyaque_before_footer' ); ?>
 		<div class="site-info">
-			<?php do_action( 'hq_footer' ); ?>
+			<?php do_action( 'honyaque_footer' ); ?>
 		</div><!-- .site-info -->
-		<?php do_action( 'hq_after_footer' ); ?>
+		<?php do_action( 'honyaque_after_footer' ); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php do_action( 'hq_after_body' ); ?>
+<?php do_action( 'honyaque_after_body' ); ?>
 
 <?php wp_footer(); ?>
 

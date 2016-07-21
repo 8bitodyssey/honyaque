@@ -11,22 +11,22 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php do_action( 'hq_before_entry_header' ); ?>
+		<?php do_action( 'honyaque_before_entry_header' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php do_action( 'hq_after_entry_header' ); ?>
+		<?php do_action( 'honyaque_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php do_action( 'hq_before_entry_content' ); ?>
+		<?php do_action( 'honyaque_before_entry_content' ); ?>
 		<?php
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hq' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'honyaque' ),
 				'after'  => '</div>',
 			) );
 		?>
-		<?php do_action( 'hq_after_entry_content' ); ?>
+		<?php do_action( 'honyaque_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -35,7 +35,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'hq' ),
+						esc_html__( 'Edit %s', 'honyaque' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

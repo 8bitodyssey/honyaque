@@ -21,13 +21,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'hq_before_body' ); ?>
+<?php do_action( 'honyaque_before_body' ); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'hq' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'honyaque' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php do_action( 'hq_before_header' ); ?>
+		<?php do_action( 'honyaque_before_header' ); ?>
 
 		<div class="site-branding">
 			<?php
@@ -46,12 +46,12 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hq' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'honyaque' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<?php do_action( 'hq_after_header' ); ?>
+		<?php do_action( 'honyaque_after_header' ); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<?php do_action( 'hq_before_content' ); ?>
+		<?php do_action( 'honyaque_before_content' ); ?>

@@ -7,7 +7,7 @@
  * @package honyaque
  */
 
-if ( ! function_exists( 'hq_setup' ) ) :
+if ( ! function_exists( 'honyaque_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'hq_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function hq_setup() {
+function honyaque_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on hq, use a find and replace
-	 * to change 'hq' to the name of your theme in all the template files
+	 * If you're building a theme based on honyaque, use a find and replace
+	 * to change 'honyaque' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'hq', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'honyaque', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor to resemble the theme style.
 	add_editor_style();
@@ -47,7 +47,7 @@ function hq_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'hq' ),
+		'primary' => esc_html__( 'Primary', 'honyaque' ),
 	) );
 
 	/*
@@ -63,13 +63,13 @@ function hq_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'hq_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'honyaque_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'hq_setup' );
+add_action( 'after_setup_theme', 'honyaque_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -78,52 +78,52 @@ add_action( 'after_setup_theme', 'hq_setup' );
  *
  * @global int $content_width
  */
-function hq_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'hq_content_width', 640 );
+function honyaque_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'honyaque_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'hq_content_width', 0 );
+add_action( 'after_setup_theme', 'honyaque_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function hq_widgets_init() {
+function honyaque_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'hq' ),
+		'name'          => esc_html__( 'Sidebar', 'honyaque' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'hq' ),
+		'description'   => esc_html__( 'Add widgets here.', 'honyaque' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'hq_widgets_init' );
+add_action( 'widgets_init', 'honyaque_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function hq_scripts() {
+function honyaque_scripts() {
 
-	$hq_theme_data = wp_get_theme();
-	$hq_theme_ver  = $hq_theme_data->get( 'Version' );
+	$honyaque_theme_data = wp_get_theme();
+	$honyaque_theme_ver  = $honyaque_theme_data->get( 'Version' );
 
-	$hq_stylesheet = get_stylesheet_uri();
+	$honyaque_stylesheet = get_stylesheet_uri();
 
 	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) && file_exists( get_stylesheet_directory() . '/css/style.css' ) ) { // WP_DEBUG = ture
-		$hq_stylesheet = get_stylesheet_directory_uri() . '/css/style.css';
+		$honyaque_stylesheet = get_stylesheet_directory_uri() . '/css/style.css';
 	}
 
 	wp_enqueue_style(
-		'hq-style',
-		$hq_stylesheet,
+		'honyaque-style',
+		$honyaque_stylesheet,
 		array(),
-		$hq_theme_ver
+		$honyaque_theme_ver
 	);
 
 	wp_enqueue_script(
-		'hq-navigation',
+		'honyaque-navigation',
 		get_template_directory_uri() . '/js/navigation.js',
 		array(),
 		'20151215',
@@ -131,7 +131,7 @@ function hq_scripts() {
 	);
 
 	wp_enqueue_script(
-		'hq-skip-link-focus-fix',
+		'honyaque-skip-link-focus-fix',
 		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 		array(),
 		'20151215',
@@ -143,14 +143,14 @@ function hq_scripts() {
 	}
 
 	wp_enqueue_script(
-		'hq-script',
+		'honyaque-script',
 		get_stylesheet_directory_uri() . '/js/honyaque.js',
 		array('jquery'),
-		$hq_theme_ver,
+		$honyaque_theme_ver,
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'hq_scripts' );
+add_action( 'wp_enqueue_scripts', 'honyaque_scripts' );
 
 /**
  * Implement the Custom Header feature.

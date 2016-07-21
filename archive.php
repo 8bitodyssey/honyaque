@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<?php do_action( 'hq_before_primary' ); ?>
+		<?php do_action( 'honyaque_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -45,7 +45,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-		<?php do_action( 'hq_after_primary' ); ?>
+		<?php do_action( 'honyaque_after_primary' ); ?>
 	</div><!-- #primary -->
 
 <?php

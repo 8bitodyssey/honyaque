@@ -10,14 +10,14 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<?php do_action( 'hq_before_primary' ); ?>
+		<?php do_action( 'honyaque_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'hq' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'honyaque' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php
@@ -42,7 +42,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-		<?php do_action( 'hq_after_primary' ); ?>
+		<?php do_action( 'honyaque_after_primary' ); ?>
 	</section><!-- #primary -->
 
 <?php
