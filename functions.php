@@ -108,12 +108,21 @@ function honyaque_scripts() {
 
 	$honyaque_theme_data = wp_get_theme();
 	$honyaque_theme_ver  = $honyaque_theme_data->get( 'Version' );
+	$foundation_ver = '6.2.0';
 
 	$honyaque_stylesheet = get_stylesheet_uri();
 
 	if ( defined( 'WP_DEBUG' ) && ( WP_DEBUG == true ) && file_exists( get_stylesheet_directory() . '/css/style.css' ) ) { // WP_DEBUG = ture
 		$honyaque_stylesheet = get_stylesheet_directory_uri() . '/css/style.css';
 	}
+
+	//foundation style
+	wp_enqueue_style(
+		'foundation-style',
+		get_stylesheet_directory_uri() . '/css/app.css',
+		array(),
+		$honyaque_theme_ver
+	);
 
 	wp_enqueue_style(
 		'honyaque-style',
