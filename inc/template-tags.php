@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom template tags for this theme.
+ * Custom template tags for this theme
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
@@ -109,7 +109,7 @@ function honyaque_categorized_blog() {
 }
 
 /**
- * Flush out the transients used in honyaque_categorized_blog
+ * Flush out the transients used in honyaque_categorized_blog.
  */
 function honyaque_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {

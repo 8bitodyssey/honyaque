@@ -1,6 +1,6 @@
 <?php
 /**
- * honyaque Theme Customizer.
+ * honyaque Theme Customizer
  *
  * @package honyaque
  */

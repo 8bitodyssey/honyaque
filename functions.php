@@ -1,6 +1,6 @@
 <?php
 /**
- * honyaque functions and definitions.
+ * honyaque functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -20,7 +20,7 @@ function honyaque_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on honyaque, use a find and replace
-	 * to change 'honyaque' to the name of your theme in all the template files
+	 * to change 'honyaque' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'honyaque', get_template_directory() . '/languages' );
 
@@ -47,7 +47,7 @@ function honyaque_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'honyaque' ),
+		'menu-1' => esc_html__( 'Primary', 'honyaque' ),
 	) );
 
 	/*
@@ -67,6 +67,9 @@ function honyaque_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 add_action( 'after_setup_theme', 'honyaque_setup' );
@@ -150,6 +153,14 @@ function honyaque_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script(
+		'foundation',
+		get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js',
+		array( 'jquery' ),
+		$foundation_ver,
+		true
+	);
 
 	wp_enqueue_script(
 		'honyaque-script',
